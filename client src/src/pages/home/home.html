@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Lego Set Viewer</h3>
+
+<div class="wallpaper"></div>
+  <!--<p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+  </p>-->
+
+  <ion-grid>
+    <ion-col offset-1>
+      <ion-row>
+        <button ion-button primary round (click)="goToSearch()">Begin your Search</button>
+      </ion-row>
+      <ion-row>
+        <button ion-button secondary round (click)="goToList()">Check your Inventory</button>
+      </ion-row>
+    </ion-col>
+  </ion-grid>
+
+</ion-content>

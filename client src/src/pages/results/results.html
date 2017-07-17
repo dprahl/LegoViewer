@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Results</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div resultCount>
+    Total sets: {{sets.length}}
+  </div>
+
+  <div *ngIf="sets.length < 1" noResult>
+    <H5><br>No Sets found matching search criteria.<br>Please try again.</H5>
+  </div>
+
+  <ion-list inset>
+    <button ion-item *ngFor="let set of sets" (click)="itemTapped($event, set)">
+      {{set.setNumber}}
+      <div class="item-note">
+        {{set.description}}
+      </div>
+      <!-- <div class="item-url">
+        {{set.url}}
+      </div> -->
+    </button>
+  </ion-list>
+
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+
+</ion-content>

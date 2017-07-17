@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>LegoSet Search</h3>
+
+  <h6>
+    Here you can search for all available Lego sets by specific set number or by typing a description.
+  </h6>
+
+  <ion-list>
+
+      <ion-item>
+        <ion-label>Set Number</ion-label>
+        <ion-input type="text"  [(ngModel)]="input1" placeholder="eg. 60139-1 or 60139"></ion-input>
+      </ion-item>
+      <button ion-button icon-left color="primary" round (click)="goToSearchSetNumber(input1)">
+        <ion-icon name="search"></ion-icon>
+        Search
+      </button>
+
+    <div>
+    </div>
+
+      <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-input type="text" [(ngModel)]="input2" placeholder="motorcycle, Star Wars, etc."></ion-input>
+      </ion-item>
+      <button ion-button icon-left color="primary" round (click)="goToSearchDescription(input2)">
+        <ion-icon name="search"></ion-icon>
+        Search
+      </button>
+
+    </ion-list>
+
+</ion-content>
